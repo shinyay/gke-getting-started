@@ -22,10 +22,19 @@ $ gcloud container clusters create shinyay-cluster \
 ```
 
 #### Multi-zone clusters
+A multi-zonal cluster has a single replica of the control plane running in a single zone, and has nodes running in multiple zones. 
+
+```
+$ gcloud container clusters create shinyay-cluster \
+    --zone us-central1-c \
+    --node-locations us-central1-a,us-central1-b,us-central1-c
+```
+
 #### Regional clusters
 
 
 ## Demo
+
 
 ## Features
 
