@@ -31,9 +31,15 @@ $ gcloud container clusters create shinyay-cluster \
 ```
 
 #### Regional clusters
+A regional cluster has multiple replicas of the control plane, running in multiple zones within a given [region](https://cloud.google.com/compute/docs/regions-zones#available).
 
+```
+$ gcloud container clusters create shinyay-cluster \
+    --region us-west1
+```
 
 ## Demo
+
 
 
 ## Features
