@@ -6,6 +6,18 @@ Overview
 ### Creating Clusters
 ![cluster-architecture.](https://cloud.google.com/kubernetes-engine/images/cluster-architecture.svg)
 
+The types of available clusters include: `zonal` (single-zone or multi-zonal) and `regional`.
+
+- Zonal clusters
+  - Single-zone clusters
+  - Multi-zonal clusters
+- Regional Clusters
+
+#### Single-zone clusters
+#### Multi-zone clusters
+#### Regional clusters
+
+
 ## Demo
 
 
