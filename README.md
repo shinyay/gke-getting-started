@@ -42,10 +42,27 @@ $ gcloud container clusters create shinyay-cluster \
 #### Load balancing
 ##### Exposing App with Services
 ###### ClusterIP
+
+Create the Deployment and Service
 ```
 $ kubectl apply -f deployment-cip.yml
 $ kubectl apply -f service-cip.yml
 ```
+
+Retrieve ClusterIP
+```
+$ kubectl get service -o json|jq -r .items[0].spec.clusterIP
+```
+
+Access Service
+```
+$ kubectl get pods
+$ kubectl exec -it POD-NAME -- sh
+$ apk add --no-cache curl
+$ curl CLUSTER-IP:80
+```
+
+
 
 ## Demo
 
