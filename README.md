@@ -38,7 +38,17 @@ $ gcloud container clusters create shinyay-cluster \
     --region us-west1
 ```
 
+### Configuring Cluster Network
+#### Load balancing
+##### Exposing App with Services
+###### ClusterIP
+```
+$ kubectl get service -o json|jq -r .items[0].spec.clusterIP
+```
+
+
 ## Demo
+
 
 
 
