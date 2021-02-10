@@ -1,33 +1,13 @@
-# Name
+# GKE Getting Started
 
 Overview
 
 ## Description
+### Creating Clusters
+![cluster-architecture.](https://cloud.google.com/kubernetes-engine/images/cluster-architecture.svg)
 
 ## Demo
-```
-$ gcloud container clusters create shinyay-cluster --scopes cloud-platform \
-    --num-nodes 1 \
-    --enable-stackdriver-kubernetes \
-    --zone us-central1-c
-```
 
-### ClusterIP
-```
-$ kubectl get service -o json|jq -r .items[0].spec.clusterIP
-```
-
-```
-$ kubectl exec -it POD-NAME -- sh
-$ apk add --no-cache curl
-$ curl CLUSTER-IP:80
-```
-
-### NodePort
-```
-$ kubectl get nodes --output wide
-$ gcloud compute firewall-rules create test-node-port --allow tcp:31271
-```
 
 ## Features
 
