@@ -62,6 +62,13 @@ $ apk add --no-cache curl
 $ curl CLUSTER-IP:80
 ```
 
+###### NodePort
+
+Create the Deployment and Service
+```
+$ kubectl apply -f deployment-np.yml
+$ kubectl apply -f service-np.yml
+```
 
 
 ## Demo
