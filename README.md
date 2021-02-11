@@ -98,6 +98,11 @@ $ kubectl apply -f deployment-lb.yml
 $ kubectl apply -f service-lb.yml
 ```
 
+Show External IP
+```
+$ kubectl get services -o wide
+```
+
 ## Demo
 
 
