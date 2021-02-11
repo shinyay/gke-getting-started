@@ -70,6 +70,12 @@ $ kubectl apply -f deployment-np.yml
 $ kubectl apply -f service-np.yml
 ```
 
+Retrieve NodePort
+```
+$ kubectl get services np-service -o json|jq -r .spec.ports[].nodePort
+```
+
+
 
 ## Demo
 
