@@ -75,7 +75,10 @@ Retrieve NodePort
 $ kubectl get services np-service -o json|jq -r .spec.ports[].nodePort
 ```
 
-
+Create Firewall Rule
+```
+$ gcloud compute firewall-rules create test-node-port --allow tcp:NODEPORT
+```
 
 ## Demo
 
