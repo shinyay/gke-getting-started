@@ -85,6 +85,10 @@ Show External IP
 $ kubectl get nodes -o wide
 ```
 
+Access Service
+```
+$ curl EXTERNAL-IP:NODEPORT
+```
 
 ## Demo
 
