@@ -80,6 +80,12 @@ Create Firewall Rule
 $ gcloud compute firewall-rules create test-node-port --allow tcp:NODEPORT
 ```
 
+Show External IP
+```
+$ kubectl get nodes -o wide
+```
+
+
 ## Demo
 
 
