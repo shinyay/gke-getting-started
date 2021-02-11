@@ -114,7 +114,10 @@ $ curl EXTERNAL-IP:PORT
 ```
 
 ## Demo
-
+### Clean up
+```
+$ gcloud container clusters delete NAME [--region=REGION | --zone=ZONE]
+```
 
 
 
