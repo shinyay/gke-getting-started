@@ -90,6 +90,14 @@ Access Service
 $ curl EXTERNAL-IP:NODEPORT
 ```
 
+###### LoadBalancer
+
+Create the Deployment and Service
+```
+$ kubectl apply -f deployment-lb.yml
+$ kubectl apply -f service-lb.yml
+```
+
 ## Demo
 
 
