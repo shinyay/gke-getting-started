@@ -98,9 +98,19 @@ $ kubectl apply -f deployment-lb.yml
 $ kubectl apply -f service-lb.yml
 ```
 
+Retrieve Port
+```
+$ kubectl get services np-service -o json|jq -r .spec.ports[].port
+```
+
 Show External IP
 ```
 $ kubectl get services -o wide
+```
+
+Access Service
+```
+$ curl EXTERNAL-IP:PORT
 ```
 
 ## Demo
