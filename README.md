@@ -8,10 +8,11 @@ Overview
 
 The types of available clusters include: `zonal` (single-zone or multi-zonal) and `regional`.
 
-- Zonal clusters
-  - Single-zone clusters
-  - Multi-zonal clusters
-- Regional Clusters
+- Zonal Cluster
+  - Single-zone Cluster
+  - Multi-zonal Cluster
+- Regional Cluster
+- Private Cluster
 
 #### Single-zone clusters
 A single-zone cluster has a single control plane running in one [zone](https://cloud.google.com/compute/docs/regions-zones#available).
@@ -37,6 +38,9 @@ A regional cluster has multiple replicas of the control plane, running in multip
 $ gcloud container clusters create shinyay-cluster \
     --region us-west1
 ```
+
+#### Private Cluster
+
 
 ### Configuring Cluster Network
 #### Load balancing
