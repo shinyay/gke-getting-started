@@ -55,7 +55,9 @@ $ gcloud container clusters create shinyay-cluster \
 
 ##### Public endpoint access enabled, authorized networks disabled
 ```
-$ gcloud container clusters create shinyay \
+$ gcloud container clusters create shinyay-cluster \
+    --zone us-central1-c \
+    --master-ipv4-cidr 172.16.0.0/28 \
     --enable-ip-alias \
     --enable-private-nodes \
     --no-enable-master-authorized-networks
