@@ -78,11 +78,14 @@ $ gcloud container clusters create shinyay-cluster \
 ```
 
 ### Windows Cluster
+#### Cluster with Linux Node Pool for Add-ons
 ```
 $ gcloud container clusters create shinyay-win-cluster \
     --zone us-central1-c \
     --enable-ip-alias
 ```
+
+
 
 ### Configuring Cluster Network
 #### Load balancing
