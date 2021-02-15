@@ -100,6 +100,10 @@ $ gcloud container node-pools create win-node-pool \
 $ kubectl get mutatingwebhookconfigurations
 ```
 
+#### Upgrading Windows Server node pools
+- [Windows container version compatibility](https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/version-compatibility?tabs=windows-server-1909%2Cwindows-10-1909)
+- [Building Windows Server multi-arch images](https://cloud.google.com/kubernetes-engine/docs/tutorials/building-windows-multi-arch-images)
+
 ### Configuring Cluster Network
 #### Load balancing
 ##### Exposing App with Services
