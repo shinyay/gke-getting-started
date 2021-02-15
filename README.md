@@ -44,6 +44,23 @@ $ gcloud container clusters create shinyay-cluster \
 - Public endpoint access enabled, authorized networks enabled
 - Public endpoint access enabled, authorized networks disabled
 
+##### Public endpoint access disabled
+```
+
+```
+
+##### Public endpoint access enabled, authorized networks enabled
+```
+```
+
+##### Public endpoint access enabled, authorized networks disabled
+```
+$ gcloud container clusters create shinyay \
+    --enable-ip-alias \
+    --enable-private-nodes \
+    --no-enable-master-authorized-networks
+```
+
 ### Configuring Cluster Network
 #### Load balancing
 ##### Exposing App with Services
