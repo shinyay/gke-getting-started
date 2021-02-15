@@ -13,6 +13,7 @@ The types of available clusters include: `zonal` (single-zone or multi-zonal) an
   - Multi-zonal Cluster
 - Regional Cluster
 - Private Cluster
+- Windows Cluster
 
 #### Single-zone clusters
 A single-zone cluster has a single control plane running in one [zone](https://cloud.google.com/compute/docs/regions-zones#available).
@@ -74,6 +75,13 @@ $ gcloud container clusters create shinyay-cluster \
     --enable-ip-alias \
     --enable-private-nodes \
     --no-enable-master-authorized-networks
+```
+
+### Windows Cluster
+```
+$ gcloud container clusters create shinyay-win-cluster \
+    --zone us-central1-c \
+    --enable-ip-alias
 ```
 
 ### Configuring Cluster Network
