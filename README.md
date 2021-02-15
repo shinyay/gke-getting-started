@@ -100,6 +100,34 @@ $ gcloud container node-pools create win-node-pool \
 $ kubectl get mutatingwebhookconfigurations
 ```
 
+#### Deploy Windows App
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iis
+  labels:
+    app: iis
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: iis
+  template:
+    metadata:
+      labels:
+        app: iis
+    spec:
+      nodeSelector:
+        kubernetes.io/os: windows
+      containers:
+      - name: iis-server
+        image: mcr.microsoft.com/windows/servercore/iis
+        ports:
+        - containerPort: 80
+
+```
+
 #### Upgrading Windows Server node pools
 - [Upgrading Windows Server node pools](https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-cluster-windows#upgrading_windows_server_node_pools)
   - [Windows container version compatibility](https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/version-compatibility?tabs=windows-server-1909%2Cwindows-10-1909)
