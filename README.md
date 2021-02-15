@@ -40,7 +40,9 @@ $ gcloud container clusters create shinyay-cluster \
 ```
 
 #### Private Cluster
-
+- Public endpoint access disabled
+- Public endpoint access enabled, authorized networks enabled
+- Public endpoint access enabled, authorized networks disabled
 
 ### Configuring Cluster Network
 #### Load balancing
