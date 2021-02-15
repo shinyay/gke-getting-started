@@ -95,6 +95,11 @@ $ gcloud container node-pools create win-node-pool \
     --machine-type n1-standard-2
 ```
 
+#### Webhook for Pod with `kubernetes.io/os: windows`
+```
+$ kubectl get mutatingwebhookconfigurations
+```
+
 ### Configuring Cluster Network
 #### Load balancing
 ##### Exposing App with Services
