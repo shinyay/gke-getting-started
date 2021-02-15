@@ -132,6 +132,11 @@ spec:
 
 ```
 
+#### Expose Windows App
+```
+$ kubectl get services iis-lb-service -o json|jq -r .status.loadBalancer.ingress[0].ip
+```
+
 #### Upgrading Windows Server node pools
 - [Upgrading Windows Server node pools](https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-cluster-windows#upgrading_windows_server_node_pools)
   - [Windows container version compatibility](https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/version-compatibility?tabs=windows-server-1909%2Cwindows-10-1909)
