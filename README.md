@@ -139,6 +139,7 @@ $ kubectl apply -f service-iis-lb.yml
 ```
 ```
 $ kubectl get services iis-lb-service -o json|jq -r .status.loadBalancer.ingress[0].ip
+$ open http://(kubectl get services iis-lb-service -o json|jq -r .status.loadBalancer.ingress[0].ip)
 ```
 
 #### Upgrading Windows Server node pools
