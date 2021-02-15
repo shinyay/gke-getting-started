@@ -102,7 +102,9 @@ $ kubectl get mutatingwebhookconfigurations
 
 #### Deploy Windows App
 - [deployment-iis.yml](deploying-workloads/windows-app/deployment-iis.yml)
-
+```
+$ kubectl apply -f deployment-iis.yml
+```
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
