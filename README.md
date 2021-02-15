@@ -133,6 +133,10 @@ spec:
 ```
 
 #### Expose Windows App
+-[service-iis-lb.yml](deploying-workloads/windows-app/service-iis-lb.yml)
+```
+$ kubectl apply -f service-iis-lb.yml
+```
 ```
 $ kubectl get services iis-lb-service -o json|jq -r .status.loadBalancer.ingress[0].ip
 ```
