@@ -85,7 +85,15 @@ $ gcloud container clusters create shinyay-win-cluster \
     --enable-ip-alias
 ```
 
-
+#### Windows Server Node Pool
+```
+$ gcloud container node-pools create win-node-pool \
+    --zone us-central1-c \
+    --cluster shinyay-win-cluster \
+    --image-type WINDOWS_SAC \
+    --no-enable-autoupgrade \
+    --machine-type n1-standard-2
+```
 
 ### Configuring Cluster Network
 #### Load balancing
