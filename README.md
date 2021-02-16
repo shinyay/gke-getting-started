@@ -77,6 +77,19 @@ $ gcloud container clusters create shinyay-cluster \
     --no-enable-master-authorized-networks
 ```
 
+#### GKE Version (Release Channel / Static Version)
+##### Release Channel
+- `rapid`
+- `regular`
+- `stable`
+- `None`
+
+```
+$ gcloud container clusters update shinyay-cluster \
+    --release-channel rapid
+    --zone us-central1-c
+```
+
 ### Windows Cluster
 #### Cluster with Linux Node Pool for Add-ons
 ```
