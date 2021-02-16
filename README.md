@@ -90,6 +90,12 @@ $ gcloud container clusters update shinyay-cluster \
     --zone us-central1-c
 ```
 
+Available GKE versions in Channel
+```
+$ gcloud container get-server-config --format "yaml(channels)" \
+    --zone us-central1-c
+```
+
 ### Windows Cluster
 #### Cluster with Linux Node Pool for Add-ons
 ```
