@@ -85,7 +85,7 @@ $ gcloud container clusters create shinyay-cluster \
 - `None`
 
 ```
-$ gcloud container clusters update shinyay-cluster \
+$ gcloud container clusters create shinyay-cluster \
     --release-channel rapid
     --zone us-central1-c
 ```
