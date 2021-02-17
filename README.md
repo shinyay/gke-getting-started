@@ -234,6 +234,14 @@ $ open http://(kubectl get services iis-lb-service -o json|jq -r .status.loadBal
   - [Building Windows Server multi-arch images](https://cloud.google.com/kubernetes-engine/docs/tutorials/building-windows-multi-arch-images)
 
 ### Configuring Cluster Network
+#### Network Configuration
+##### Route-based Cluster
+```
+$ gcloud container clusters create shinyay-cluster-route-based \
+    --no-enable-ip-alias \
+    --zone us-central1-c
+```
+##### VPC-Native Cluster
 #### Load balancing
 ##### Exposing App with Services
 ###### ClusterIP
