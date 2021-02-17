@@ -127,6 +127,16 @@ $ gcloud compute routers create shinyay-router \
     --region us-central1
 ```
 
+3. Cloud NAT
+```
+$ gcloud compute routers nats create shinyay-nat \
+    --router shinyay-router \
+    --router-region us-central1 \
+    --auto-allocate-nat-external-ips \
+    --nat-all-subnet-ip-ranges \
+    --enable-logging
+```
+
 
 
 #### GKE Version (Release Channel / Static Version)
