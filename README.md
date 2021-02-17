@@ -89,7 +89,7 @@ $ gcloud container clusters create shinyay-cluster \
 ```
 
 ##### Outbound Traffic with Cloud NAT
-Create subnet
+1-CASE: Create subnet with GKE Cluster
 ```
 $ gcloud container clusters create [CLUSTER]] \
     --create-subnetwork name=[SUBNET] \
@@ -97,13 +97,30 @@ $ gcloud container clusters create [CLUSTER]] \
     :
 ```
 
-Use subnet
+1-CASE: Use existing subnet with GKE Cluster
+
+1-1. Create VPC
 ```
-$ gcloud container clusters create [CLUSTER]] \
+$  gcloud compute networks create [NETWORK] \
+     --subnet-mode custom
+```
+
+1-2. Create Subnet
+```
+$ gcloud compute networks subnets create subnet-us-east-192 \
+   --network shinyay-network \
+   --region [REGION:us-central1] \
+   --range [SUBNET_RANGE:192.168.1.0/24]
+```
+1-3. Use subnet
+```
+$ gcloud container clusters create [CLUSTER] \
     --subnetwork [SUBNET] \
     :
     :
 ```
+
+
 
 #### GKE Version (Release Channel / Static Version)
 ##### Release Channel
