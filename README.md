@@ -120,6 +120,13 @@ $ gcloud container clusters create [CLUSTER] \
     :
 ```
 
+2. Cloud Router
+```
+$ gcloud compute routers create shinyay-router \
+    --network default \
+    --region us-central1
+```
+
 
 
 #### GKE Version (Release Channel / Static Version)
