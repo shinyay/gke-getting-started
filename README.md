@@ -137,7 +137,12 @@ $ gcloud compute routers nats create shinyay-nat \
     --enable-logging
 ```
 
-
+4. Confirm Outbound Traffic
+```
+$ kubectl apply -f exposing-with-services/loadbalancer/
+$ kubectl exec -it [POD] -- apk add --no-cache curl
+$ kubectl exec -it [POD] -- curl httpbin.org/ip
+```
 
 #### GKE Version (Release Channel / Static Version)
 ##### Release Channel
