@@ -237,14 +237,16 @@ $ open http://(kubectl get services iis-lb-service -o json|jq -r .status.loadBal
 #### Network Configuration
 ##### Routes-based Cluster
 Routes-based cluster uses custom static routes in a VPC network.
- - [Static routes](https://cloud.google.com/vpc/docs/routes#static_routes)
+- [Static routes](https://cloud.google.com/vpc/docs/routes#static_routes)
 
 ```
 $ gcloud container clusters create shinyay-cluster-route-based \
     --no-enable-ip-alias \
     --zone us-central1-c
 ```
-##### VPC-Native Cluster
+##### VPC-native Cluster
+VPC-native cluster uses alias IP address ranges.
+- [Alias IP](https://cloud.google.com/vpc/docs/alias-ip)
 ```
 
 ```
