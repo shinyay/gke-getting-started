@@ -71,6 +71,13 @@ We can get your local ip:
 $ curl -s ip4only.me/api/ |awk -F , '{print $2}'
 ```
 
+We can also update `Master Authorized Networks`
+```
+$ gcloud container clusters update shinyay-cluster \
+    --enable-master-authorized-networks \
+    --master-authorized-networks [AUTHORIZED_IPV4_ADDRESS]/32
+```
+
 ##### Public endpoint access enabled, authorized networks disabled
 ```
 $ gcloud container clusters create shinyay-cluster \
