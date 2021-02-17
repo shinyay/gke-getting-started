@@ -63,7 +63,12 @@ $ gcloud container clusters create shinyay-cluster \
     --enable-ip-alias \
     --enable-private-nodes \
     --enable-master-authorized-networks \
-    --master-authorized-networks CIDR
+    --master-authorized-networks [AUTHORIZED_IPV4_ADDRESS]/32
+```
+
+We can get your local ip:
+```
+$ curl -s ip4only.me/api/ |awk -F , '{print $2}'
 ```
 
 ##### Public endpoint access enabled, authorized networks disabled
