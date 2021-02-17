@@ -88,6 +88,23 @@ $ gcloud container clusters create shinyay-cluster \
     --no-enable-master-authorized-networks
 ```
 
+##### Outbound Traffic with Cloud NAT
+Create subnet
+```
+$ gcloud container clusters create [CLUSTER]] \
+    --create-subnetwork name=[SUBNET] \
+    :
+    :
+```
+
+Use subnet
+```
+$ gcloud container clusters create [CLUSTER]] \
+    --subnetwork [SUBNET] \
+    :
+    :
+```
+
 #### GKE Version (Release Channel / Static Version)
 ##### Release Channel
 - `rapid`
