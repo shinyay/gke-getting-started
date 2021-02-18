@@ -346,6 +346,10 @@ Access Service
 $ curl EXTERNAL-IP:PORT
 ```
 
+#### Ingress for GKE
+##### Container-native Load balancing
+**Container-native load balancing** enables load balancers to target Pods directly and to distribute traffic to Pods.
+
 ## Demo
 ### Clean up
 ```
