@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: neg-app
+  name: neg-app
+spec:
+  selector:
+    matchLabels:
+      run: neg-app
+  template:
+    metadata:
+      labels:
+        run: neg-app
+    spec:
+      containers:
+      - image: k8s.gcr.io/serve_hostname:v1.4
+        name: hostname
+        ports:
+        - containerPort: 9376
+          protocol: TCP
