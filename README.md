@@ -265,6 +265,7 @@ Benefits of VPC-native clusters:
 $ gcloud container clusters create shinyay-cluster-vpc-native \
     --zone us-central1-c \
     --enable-ip-alias \
+    --create-subnetwork name=cluster-subnet,range=10.0.0.0/24
     --cluster-ipv4-cidr /16 \
     --services-ipv4-cidr /22
 ```
