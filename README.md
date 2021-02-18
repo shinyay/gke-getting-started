@@ -372,7 +372,10 @@ $ kubectl apply -f ingress-for-gke/container-native-loadbalancing/service-neg.ym
 $ kubectl apply -f ingress-for-gke/container-native-loadbalancing/ingress-neg.yml
 ```
 
-
+Confirm NEG app
+```
+$ curl (kubectl get ingress -o json|jq -r .items[0].status.loadBalancer.ingress[0].ip)
+```
 
 ## Demo
 ### Clean up
