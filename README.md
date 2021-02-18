@@ -247,6 +247,15 @@ $ gcloud container clusters create shinyay-cluster-route-based \
 ##### VPC-native Cluster
 VPC-native cluster uses alias IP address ranges.
 - [Alias IP](https://cloud.google.com/vpc/docs/alias-ip)
+
+Benefits of VPC-native clusters:
+- Pod IP addresses are natively routable within the cluster's VPC network
+- Pod IP addresses are reserved in the VPC before the Pods are created
+- Pod IP address ranges do not depend on custom static routes
+  - automatically-generated [subnet routes](https://cloud.google.com/vpc/docs/routes#subnet-routes)
+- You can create firewall rules for Pod IP address ranges
+
+
 ```
 
 ```
