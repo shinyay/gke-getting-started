@@ -255,6 +255,11 @@ Benefits of VPC-native clusters:
   - automatically-generated [subnet routes](https://cloud.google.com/vpc/docs/routes#subnet-routes)
 - You can create firewall rules for Pod IP address ranges
 
+|Subnet Range|Description|
+|------------|-----------|
+|Node|Node IP addresses are assigned from **Primary IP** range of subnet of cluster|
+|Pod|Pod IP addresses are taken from subnet's **Secondary IP address range for Pods**|
+|Service|Service (cluster IP) addresses are taken from subnet's **Secondary IP address range for Services**|
 
 ```
 
