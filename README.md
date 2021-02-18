@@ -365,6 +365,13 @@ metadata:
     cloud.google.com/neg: '{"ingress": true}'
 ```
 
+Deploy app and service:
+```
+$ kubectl apply -f ingress-for-gke/container-native-loadbalancing/deloyment-neg.yml
+$ kubectl apply -f ingress-for-gke/container-native-loadbalancing/service-neg.yml
+$ kubectl apply -f ingress-for-gke/container-native-loadbalancing/ingress-neg.yml
+```
+
 
 
 ## Demo
