@@ -268,6 +268,9 @@ $ gcloud container clusters create shinyay-cluster-vpc-native \
     --cluster-ipv4-cidr /16 \
     --services-ipv4-cidr /22
 ```
+
+![vpc-native](https://user-images.githubusercontent.com/3072734/108294188-bd6f6180-71d8-11eb-8991-a7cdac45ceae.png)
+
 #### Load balancing
 ##### Exposing App with Services
 ###### ClusterIP
