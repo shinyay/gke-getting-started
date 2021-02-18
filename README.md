@@ -352,6 +352,9 @@ $ curl EXTERNAL-IP:PORT
 
 This configicuration model is **[Network Endpoint Group](https://cloud.google.com/load-balancing/docs/negs)(NEG)**
 
+![neg](https://user-images.githubusercontent.com/3072734/108304619-bef65500-71eb-11eb-8d35-ec7a61b03c7a.png)
+
+
 ## Demo
 ### Clean up
 ```
