@@ -350,6 +350,8 @@ $ curl EXTERNAL-IP:PORT
 ##### Container-native Load balancing
 **Container-native load balancing** enables load balancers to target Pods directly and to distribute traffic to Pods.
 
+This configicuration model is **[Network Endpoint Group](https://cloud.google.com/load-balancing/docs/negs)(NEG)**
+
 ## Demo
 ### Clean up
 ```
