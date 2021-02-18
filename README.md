@@ -360,7 +360,6 @@ The  Service's annotation, `cloud.google.com/neg: '{"ingress": true}'`, enables 
 apiVersion: v1
 kind: Service
 metadata:
-  name: neg-svc
   annotations:
     cloud.google.com/neg: '{"ingress": true}'
 ```
