@@ -262,7 +262,11 @@ Benefits of VPC-native clusters:
 |Service|Service (cluster IP) addresses are taken from subnet's **Secondary IP address range for Services**|
 
 ```
-
+$ gcloud container clusters create shinyay-cluster-vpc-native \
+    --zone us-central1-c \
+    --enable-ip-alias \
+    --cluster-ipv4-cidr /16 \
+    --services-ipv4-cidr /22
 ```
 #### Load balancing
 ##### Exposing App with Services
