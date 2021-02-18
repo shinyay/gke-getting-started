@@ -350,9 +350,21 @@ $ curl EXTERNAL-IP:PORT
 ##### Container-native Load balancing
 **Container-native load balancing** enables load balancers to target Pods directly and to distribute traffic to Pods.
 
+![neg](https://user-images.githubusercontent.com/3072734/108304619-bef65500-71eb-11eb-8d35-ec7a61b03c7a.png)
+
 This configicuration model is **[Network Endpoint Group](https://cloud.google.com/load-balancing/docs/negs)(NEG)**
 
-![neg](https://user-images.githubusercontent.com/3072734/108304619-bef65500-71eb-11eb-8d35-ec7a61b03c7a.png)
+
+The  Service's annotation, `cloud.google.com/neg: '{"ingress": true}'`, enables container-native load balancing.
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: neg-svc
+  annotations:
+    cloud.google.com/neg: '{"ingress": true}'
+```
+
 
 
 ## Demo
