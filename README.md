@@ -10,6 +10,14 @@ $ gcloud compute networks create shinyay-network \
     --subnet-mode custom
 ```
 
+#### Subnet
+```
+$ gcloud compute networks subnets create shinyay-us-central-192 \
+    --network shinyay-network \
+    --region us-central1 \
+    --range 192.168.1.0/24
+```
+
 ### Creating Clusters
 ![cluster-architecture.](https://cloud.google.com/kubernetes-engine/images/cluster-architecture.svg)
 
