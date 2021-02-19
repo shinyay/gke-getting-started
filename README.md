@@ -24,6 +24,9 @@ $ gcloud compute networks subnets create shinyay-us-central-192 \
 $ gcloud compute networks subnets update shinyay-us-central-192 \
     --region us-central1 \
     --add-secondary-ranges=shinyay-pod=10.0.0.0/16
+$ gcloud compute networks subnets update shinyay-us-central-192 \
+    --region us-central1 \
+    --add-secondary-ranges=shinyay-service=10.1.0.0/22
 ```
 
 
