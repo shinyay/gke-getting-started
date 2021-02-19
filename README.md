@@ -3,33 +3,6 @@
 Overview
 
 ## Description
-### Before Clusters
-#### VPC Network
-```
-$ gcloud compute networks create shinyay-network \
-    --subnet-mode custom
-```
-
-#### Subnet
-##### Primary IP Range
-```
-$ gcloud compute networks subnets create shinyay-us-central-192 \
-    --network shinyay-network \
-    --region us-central1 \
-    --range 192.168.1.0/24
-```
-
-##### Secondary IP Range
-```
-$ gcloud compute networks subnets update shinyay-us-central-192 \
-    --region us-central1 \
-    --add-secondary-ranges=shinyay-pod=10.0.0.0/16
-$ gcloud compute networks subnets update shinyay-us-central-192 \
-    --region us-central1 \
-    --add-secondary-ranges=shinyay-service=10.1.0.0/22
-```
-
-
 ### Creating Clusters
 ![cluster-architecture.](https://cloud.google.com/kubernetes-engine/images/cluster-architecture.svg)
 
@@ -116,7 +89,7 @@ $ gcloud container clusters create shinyay-cluster \
 ```
 
 ##### Outbound Traffic with Cloud NAT
-1-CASE: Create subnet with GKE Cluster
+CASE: Create subnet with GKE Cluster
 ```
 $ gcloud container clusters create [CLUSTER]] \
     --create-subnetwork name=[SUBNET] \
@@ -124,21 +97,40 @@ $ gcloud container clusters create [CLUSTER]] \
     :
 ```
 
-1-CASE: Use existing subnet with GKE Cluster
+CASE: Use existing subnet with GKE Cluster
 
-1-1. Create VPC
+1-1. Create VPC Network
 ```
 $  gcloud compute networks create [NETWORK] \
      --subnet-mode custom
 ```
 
 1-2. Create Subnet
+
+1-2-1. Primary IP Range
 ```
-$ gcloud compute networks subnets create subnet-us-east-192 \
+$ gcloud compute networks subnets create [SUBNET] \
    --network shinyay-network \
    --region [REGION:us-central1] \
    --range [SUBNET_RANGE:192.168.1.0/24]
 ```
+
+1-2-2. Secondary IP Range
+
+1-2-2-1. Network for Pods
+```
+$ gcloud compute networks subnets update [SUBNET] \
+    --region [REGION:us-central1] \
+    --add-secondary-ranges=shinyay-pod=10.0.0.0/16
+```
+
+1-2-2-2. Network for Services
+```
+$ gcloud compute networks subnets update [SUBNET] \
+    --region [REGION:us-central1] \
+    --add-secondary-ranges=shinyay-service=10.1.0.0/22
+```
+
 1-3. Use subnet
 ```
 $ gcloud container clusters create [CLUSTER] \
