@@ -19,6 +19,12 @@ $ gcloud compute networks subnets create shinyay-us-central-192 \
     --range 192.168.1.0/24
 ```
 
+##### Secondary IP Range
+```
+$ gcloud compute networks subnets update shinyay-us-central-192 \
+    --region us-central1 \
+    --add-secondary-ranges=shinyay-pod=10.0.0.0/16
+```
 
 
 ### Creating Clusters
