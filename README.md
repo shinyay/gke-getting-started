@@ -93,6 +93,8 @@ CASE: Create subnet with GKE Cluster
 ```
 $ gcloud container clusters create [CLUSTER]] \
     --create-subnetwork name=[SUBNET] \
+    --cluster-ipv4-cidr [POD_IP_RANGE] \
+    --services-ipv4-cidr [SERVICE_IP_RANGE] \
     :
     :
 ```
