@@ -3,6 +3,13 @@
 Overview
 
 ## Description
+### Before Clusters
+#### VPC Network
+```
+$ gcloud compute networks create shinyay-network \
+    --subnet-mode custom
+```
+
 ### Creating Clusters
 ![cluster-architecture.](https://cloud.google.com/kubernetes-engine/images/cluster-architecture.svg)
 
