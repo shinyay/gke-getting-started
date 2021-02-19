@@ -1,6 +1,6 @@
 # GKE Getting Started
 
-Overview
+GKE Basics
 
 ## Description
 ### Creating Clusters
