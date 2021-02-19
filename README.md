@@ -123,7 +123,7 @@ $ gcloud compute networks subnets create [SUBNET] \
 ```
 $ gcloud compute networks subnets update [SUBNET] \
     --region [REGION:us-central1] \
-    --add-secondary-ranges=shinyay-pod=10.0.0.0/16
+    --add-secondary-ranges=shinyay-pod=[POD_IP_RANGE:10.0.0.0/16]
 ```
 
 1-2-2-2. Network for Services
