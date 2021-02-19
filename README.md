@@ -135,6 +135,8 @@ $ gcloud compute networks subnets update [SUBNET] \
 ```
 $ gcloud container clusters create [CLUSTER] \
     --subnetwork [SUBNET] \
+    --cluster-secondary-range-name shinyay-pod \
+    --services-secondary-range-name shinyay-service \
     :
     :
 ```
