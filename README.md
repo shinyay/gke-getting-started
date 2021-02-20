@@ -295,6 +295,11 @@ $ gcloud container clusters create shinyay-cluster-vpc-native \
 
 ![vpc-native](https://user-images.githubusercontent.com/3072734/108294188-bd6f6180-71d8-11eb-8991-a7cdac45ceae.png)
 
+##### NodeLocal DNSCache
+NodeLocal DNSCache improves DNS lookup latency, makes DNS lookup times more consistent, and reduces the number of DNS queries to kube-dns by running a DNS cache on each cluster node.
+
+
+
 #### Load balancing
 ##### Exposing App with Services
 ###### ClusterIP
