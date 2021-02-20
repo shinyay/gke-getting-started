@@ -298,7 +298,11 @@ $ gcloud container clusters create shinyay-cluster-vpc-native \
 ##### NodeLocal DNSCache
 NodeLocal DNSCache improves DNS lookup latency, makes DNS lookup times more consistent, and reduces the number of DNS queries to kube-dns by running a DNS cache on each cluster node.
 
-
+```
+$ gcloud container clusters create shinyay-cluster-dnscache \
+    --zone us-central1-c \
+    --addons NodeLocalDNS
+```
 
 #### Load balancing
 ##### Exposing App with Services
