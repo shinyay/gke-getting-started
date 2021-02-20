@@ -304,6 +304,14 @@ $ gcloud container clusters create shinyay-cluster-dnscache \
     --addons NodeLocalDNS
 ```
 
+```
+$ kubectl get pods -n kube-system -o wide | grep node-local-dns
+
+node-local-dns-4lhvm                                             1/1     Running   0          4m49s   10.128.0.39   gke-shinyay-cluster-dnsc-default-pool-f761cb05-hbsr
+node-local-dns-fhrp5                                             1/1     Running   0          4m48s   10.128.0.40   gke-shinyay-cluster-dnsc-default-pool-f761cb05-sfl6
+node-local-dns-tq6qn                                             1/1     Running   0          4m58s   10.128.0.41   gke-shinyay-cluster-dnsc-default-pool-f761cb05-kh9k 
+```
+
 #### Load balancing
 ##### Exposing App with Services
 ###### ClusterIP
