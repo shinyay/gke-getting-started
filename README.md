@@ -187,7 +187,7 @@ $ gcloud container get-server-config --format "yaml(channels)" \
 ```
 
 ### Windows Cluster
-- [README - Windows Cluster](README-WundowsCluster.md)
+- [README - Windows Cluster](README-WindowsCluster.md)
 
 ### Configuring Cluster Network
 #### Network Configuration
