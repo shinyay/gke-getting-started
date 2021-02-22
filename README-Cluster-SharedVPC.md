@@ -27,3 +27,9 @@ Create networks:
 - **Subnet** at `Service Project`
   - tier-1
   - tier-2
+
+```
+$ gcloud compute networks create shared-net \
+    --subnet-mode custom \
+    --project shinyay-works
+```
