@@ -246,6 +246,7 @@ node-local-dns-tq6qn                                             1/1     Running
 ```
 
 ##### [Beta] Dataplane V2
+- [Using Dataplane V2](https://cloud.google.com/kubernetes-engine/docs/how-to/dataplane-v2)
 ![ebpf](https://storage.googleapis.com/gweb-cloudblog-publish/images/Container_Networking_Interface.max-1100x1100.jpg)
 ```
 $ gcloud beta container clusters create shinyay-cluster-ebpf \
