@@ -245,6 +245,28 @@ node-local-dns-fhrp5                                             1/1     Running
 node-local-dns-tq6qn                                             1/1     Running   0          4m58s   10.128.0.41   gke-shinyay-cluster-dnsc-default-pool-f761cb05-kh9k 
 ```
 
+##### Dataplane V2
+
+```
+$ gcloud beta container clusters create shinyay-cluster-ebpf \
+    --enable-dataplane-v2 \
+    --enable-ip-alias \
+    --zone us-central1-c
+```
+
+`anetd` is the networking controller for **Dataplane V2**
+
+```
+$ kubectl -n kube-system get pods -o name
+
+pod/anet-operator-7fbbf4667f-x8p6z
+pod/anetd-54zq4
+pod/anetd-cqv44
+pod/anetd-st655
+  :
+  :
+```
+
 #### Load balancing
 ##### Exposing App with Services
 ###### ClusterIP
