@@ -2,7 +2,9 @@
 - [README - Top](README.md)
 
 ## Clusters with Shared VPC
+### Multiple Projects for Shared VPC
 Create projects:
+
 - `Host Project`
   - shinyay-works
 - `Service Project`
@@ -16,3 +18,12 @@ shinyay-works
 shinyay-service-1
 shinyay-service-2
 ```
+
+### Network and Subnet
+Create networks:
+
+- **Network** at `Host Project`
+  - shared-net
+- **Subnet** at `Service Project`
+  - tier-1
+  - tier-2
