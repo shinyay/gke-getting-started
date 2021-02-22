@@ -246,7 +246,7 @@ node-local-dns-tq6qn                                             1/1     Running
 ```
 
 ##### Dataplane V2
-
+![ebpf](https://storage.googleapis.com/gweb-cloudblog-publish/images/Container_Networking_Interface.max-1100x1100.jpg)
 ```
 $ gcloud beta container clusters create shinyay-cluster-ebpf \
     --enable-dataplane-v2 \
