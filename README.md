@@ -49,6 +49,14 @@ $ gcloud container clusters create-auto shinyay-cluster-auto \
     --project (gcloud config get-value project)
 ```
 
+```
+$ kubectl get nodes -o wide
+
+NAME                                                  STATUS   ROLES    AGE   VERSION             INTERNAL-IP   EXTERNAL-IP     OS-IMAGE                             KERNEL-VERSION   CONTAINER-RUNTIME
+gk3-shinyay-cluster-auto-default-pool-463547aa-wmp1   Ready    <none>   54s   v1.18.12-gke.1210   10.128.0.49   xx.xx.xxx.xxx   Container-Optimized OS from Google   5.4.49+          containerd://1.4.1
+gk3-shinyay-cluster-auto-default-pool-ced6c693-dkz2   Ready    <none>   57s   v1.18.12-gke.1210   10.128.0.48   xx.xx.xxx.xxx   Container-Optimized OS from Google   5.4.49+          containerd://1.4.1
+```
+
 #### Private cluster
 - Public endpoint access disabled
 - Public endpoint access enabled, authorized networks enabled
