@@ -44,6 +44,9 @@ $ gcloud container clusters create shinyay-cluster \
 Autopilot cluster provides a fully-provisioned and managed cluster configuration. Autopilot clusters are pre-configured with an optimized cluster configuration that is ready for production workloads.
 
 ```
+$ gcloud container clusters create-auto shinyay-cluster-auto \
+    --region us-central1 \
+    --project (gcloud config get-value project)
 ```
 
 #### Private cluster
