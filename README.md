@@ -57,6 +57,33 @@ gk3-shinyay-cluster-auto-default-pool-463547aa-wmp1   Ready    <none>   54s   v1
 gk3-shinyay-cluster-auto-default-pool-ced6c693-dkz2   Ready    <none>   57s   v1.18.12-gke.1210   10.128.0.48   xx.xx.xxx.xxx   Container-Optimized OS from Google   5.4.49+          containerd://1.4.1
 ```
 
+```
+$ kubectl get pods -n kube-system
+
+NAME                                                             READY   STATUS    RESTARTS   AGE
+event-exporter-gke-564fb97f9-95bnd                               2/2     Running   0          9m35s
+fluentbit-gke-2crrj                                              2/2     Running   0          7m40s
+fluentbit-gke-zpwkv                                              2/2     Running   0          7m43s
+gke-metadata-server-72q8q                                        1/1     Running   0          7m42s
+gke-metadata-server-dvk72                                        1/1     Running   0          7m39s
+gke-metrics-agent-7dn4g                                          1/1     Running   0          7m43s
+gke-metrics-agent-c6c96                                          1/1     Running   0          7m40s
+kube-dns-6bd88c9b66-dkjkk                                        4/4     Running   0          9m31s
+kube-dns-6bd88c9b66-dqrn5                                        4/4     Running   0          7m10s
+kube-dns-autoscaler-7f89fb6b79-x5cg2                             1/1     Running   0          9m31s
+kube-proxy-gk3-shinyay-cluster-auto-default-pool-463547aa-wmp1   1/1     Running   0          7m3s
+kube-proxy-gk3-shinyay-cluster-auto-default-pool-ced6c693-dkz2   1/1     Running   0          7m3s
+l7-default-backend-7fd66b8b88-hpnf7                              1/1     Running   0          9m36s
+metrics-server-v0.3.6-7c5cb99b6f-bcxcm                           2/2     Running   0          7m3s
+netd-drgw7                                                       1/1     Running   0          7m39s
+netd-qwb6p                                                       1/1     Running   0          7m42s
+node-local-dns-klqjq                                             1/1     Running   0          7m39s
+node-local-dns-wd25v                                             1/1     Running   0          7m42s
+pdcsi-node-fskgc                                                 2/2     Running   0          7m43s
+pdcsi-node-jwtt4                                                 2/2     Running   0          7m40s
+stackdriver-metadata-agent-cluster-level-58867bcc65-tbwc5        2/2     Running   0          7m9s
+```
+
 #### Private cluster
 - Public endpoint access disabled
 - Public endpoint access enabled, authorized networks enabled
