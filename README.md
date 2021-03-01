@@ -40,7 +40,13 @@ $ gcloud container clusters create shinyay-cluster \
     --region us-west1
 ```
 
-#### Private Cluster
+#### Autopilot cluster
+Autopilot cluster provides a fully-provisioned and managed cluster configuration. Autopilot clusters are pre-configured with an optimized cluster configuration that is ready for production workloads.
+
+```
+```
+
+#### Private cluster
 - Public endpoint access disabled
 - Public endpoint access enabled, authorized networks enabled
 - Public endpoint access enabled, authorized networks disabled
